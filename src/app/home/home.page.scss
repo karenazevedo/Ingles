@@ -1,1 +1,83 @@
+#score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
+  .nivel {
+    display: inline;
+    margin-right: 8px;
+  }
+}
+
+.crop {
+  width: 120px;
+  height: 80px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.container {
+  background-color: #f3de3b;
+  color: #6c1da5;
+}
+
+ion-card-title {
+  text-transform: uppercase;
+}
+
+ion-card {
+  background-color: white;
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  // height: 120px;
+  // width: 120px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-family: oswald;
+  font-size: 22px;
+}
+
+#countdown-number {
+  color: #238263;
+  display: inline-block;
+  font-weight: bold;
+  // line-height: 120px;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.circle-animation {
+  stroke-dasharray: 422px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  stroke: #238263;
+  fill: none;
+  animation: countdown 5s linear infinite forwards;
+}
+
+svg circle {
+  fill: none;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+
+  to {
+    stroke-dashoffset: 452px;
+  }
+}

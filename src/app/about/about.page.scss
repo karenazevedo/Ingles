@@ -1,1 +1,20 @@
+.container {
+  padding: 20px;
+  background-color: #f3de3b;
+  color: #6c1da5;
 
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  ion-card {
+    background-color: white;
+  }
+}

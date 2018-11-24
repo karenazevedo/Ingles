@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar> <ion-title>Auth</ion-title> </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center><img class="logo" src="../../assets/iGo.png" /></div>
+
+  <div padding>
+    <ion-item>
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input
+        [(ngModel)]="email"
+        placeholder="Digite seu e-mail"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Senha</ion-label>
+      <ion-input
+        [(ngModel)]="password"
+        type="password"
+        placeholder="Digite sua senha"
+      ></ion-input>
+    </ion-item>
+  </div>
+  <div class="footer">
+    <ion-button
+      class="btn-login"
+      *ngIf="isSignup"
+      expand="full"
+      shape="round"
+      (click)="signup(email, password)"
+      >Cadastrar</ion-button
+    >
+    <ion-button
+      class="btn-login"
+      *ngIf="!isSignup"
+      expand="full"
+      shape="round"
+      (click)="login(email, password)"
+    >
+      Login
+    </ion-button>
+
+    <a *ngIf="isSignup" (click)="isSignup = !isSignup">
+      Possui uma conta? Acesse.
+    </a>
+    <a *ngIf="!isSignup" (click)="isSignup = !isSignup"
+      >Não possui uma conta? Crie sua conta.
+    </a>
+  </div>
+</ion-content>

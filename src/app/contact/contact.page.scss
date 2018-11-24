@@ -1,1 +1,30 @@
+.image {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border-radius: 50%;
+  /*don't forget prefixes*/
+  background-image: url("../../assets/user.png");
+  background-position: center center;
+  /* as mentioned by Vad: */
+  background-size: cover;
+}
 
+.content {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.score {
+  font-size: 42px;
+  padding: 5px;
+  background-color: antiquewhite;
+}
+
+.trofeu {
+  height: 9em;
+}
+
+.shared {
+  display: block;
+}

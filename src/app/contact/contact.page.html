@@ -1,23 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Contact
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Follow us on Twitter
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
-      </ion-label>
-    </ion-item>
-  </ion-list>
+
+  <div class="content">
+    <p>{{user ? user.email : '--'}}</p>
+    <div class="image"></div>
+    <p>Minha pontuação:</p>
+    <h3 class="score">{{score}}</h3>
+    <img class="trofeu" src="../../assets/trofeu.png">
+    <div padding text-center>
+      <ion-button class="shared" expand="full" shape="round"> Desafiar amigos </ion-button>
+    </div>
+  </div>
 </ion-content>

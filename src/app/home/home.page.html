@@ -4,7 +4,44 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content>
+  <div padding class="container">
+    <div id="score">
+      <p> Score: {{ score }}</p>
+      <div>
+        <p class="nivel"> Nível: {{ getNivel() }}</p>
+        <ion-icon name="md-medal"></ion-icon>
+      </div>
+    </div>
+
+    <!-- <h3 text-center>Escolha a opção correta:</h3> -->
+
+    <div id="countdown">
+      <div id="countdown-number">
+        {{ seconds }}
+      </div>
+      <!-- <svg>
+        <circle id="circle" class="circle-animation" r="52" cx="60" cy="60"></circle>
+      </svg> -->
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title text-center>{{ words[aleatory.valueOf()] ? words[aleatory.valueOf()].translation : '' }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item-sliding *ngFor="let word of words">
+            <ion-item (click)="selectOption(word)">
+              <div class="crop">
+                <ion-img [src]="word.image"></ion-img>
+              </div>
+              <h4>{{ word.name }}</h4>
+            </ion-item>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>
